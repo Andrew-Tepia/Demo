@@ -1,0 +1,38 @@
+All-in-One WP Migration plugin (for saving website to a file, importing/exporting)
+Child Theme Wizard plugin(Helps create a Child theme)
+
+//Child theme php code https://www.youtube.com/watch?v=WyuPB4LdF-M
+***************************************************************************************************************************************
+<?php
+
+/* child style */
+function childtheme_enqueue_styles() {
+    /* might need this to remove an original parent theme's style sheet
+    wp_dequeue_style( 'insert stylesheet name here' );
+    */
+
+    wp_enqueue_style( 'parent_style', get_template_directory_uri() . '/style.css' );
+
+    wp_enqueue_style( 'child-style', get_template_directory_uri() . '/style.css', false, filemtime( get_stylesheet_directory() ) );
+
+}
+add_action( 'wp_enqueue_scripts', 'childtheme_enqueue_styles', 999);
+
+***************************************************************************************************************************************
+Customizer Export/Import (help export/import theme settings, for child theme)
+pixabay.com (for all the cool pictures)
+
+
+https://www.attendanceworks.org/foundations/  ??? 
+UN: tepia-user
+PW: YzwF!%xibKAiYmoaLsWjdMSo
+
+
+https://www.attendanceworks.org/  ???
+tepia-dev
+wLpc^@TludKC&ClNmRCD@9h$
+
+
+https://max.us.com/wp-admin/
+tepia-team
+OjRuV3IQM8QTwyX%n&un7%K0
